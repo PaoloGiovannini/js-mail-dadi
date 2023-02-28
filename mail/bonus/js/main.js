@@ -8,7 +8,7 @@ invioDom.addEventListener('click',
 
     function() {
         let controlloEmail = false;
-        let email = emailDom.value
+        let email = emailDom.value;
 
         for (let i = 0; i < listaEmail.length; i++) {
     
@@ -17,11 +17,11 @@ invioDom.addEventListener('click',
             }
         }
         
-        if(controlloEmail == false) {
-            document.querySelector(".accesso").innerHTML = `Non puoi entrare: la tua email è ${email} e non è presente nei nostri database`;
+        if(controlloEmail) {
+            document.querySelector(".accesso").innerHTML = `Puoi entrare: la tua email è ${email} e non è presente nei nostri database`;
             
         } else{
-            document.querySelector(".accesso").innerHTML = `Puoi entrare: la tua email è ${email} ed è presente nei nostri database`;
+            document.querySelector(".accesso").innerHTML = `Non puoi entrare: la tua email è ${email} ed è presente nei nostri database`;
         }
    
     }

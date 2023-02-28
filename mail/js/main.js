@@ -4,7 +4,6 @@ const listaEmail =['pippo12@gmail.com', 'pluto12@gmail.com', 'paperino12@gmail.c
 
 let controlloEmail = false;
 
-
 for (let i = 0; i < listaEmail.length; i++) {
     
     if(emailUtente == listaEmail[i]){
@@ -12,9 +11,9 @@ for (let i = 0; i < listaEmail.length; i++) {
     }
 }
 
-if(controlloEmail == false) {
-    document.querySelector(".accesso").innerHTML = `Non puoi entrare: la tua email è ${emailUtente} e non è presente nei nostri database`;
+if(controlloEmail){
+    document.querySelector(".accesso").innerHTML = `Puoi entrare: la tua email è ${emailUtente} e non è presente nei nostri database`;
     
 } else{
-    document.querySelector(".accesso").innerHTML = `Puoi entrare: la tua email è ${emailUtente} ed è presente nei nostri database`;
+    document.querySelector(".accesso").innerHTML = `Non puoi entrare: la tua email è ${emailUtente} ed è presente nei nostri database`;
 }
